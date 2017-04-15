@@ -25,7 +25,7 @@
         "class": "sidebar_container",
         "layer0.tint": ["background", 0, 0, 0, 0.4],
         "layer0.opacity": 1.0,
-        "content_margin": 0,
+        "content_margin": [0, -10, 4, 2],
     },
     {
         "class": "sidebar_container",
@@ -50,8 +50,8 @@
     },
     {
         "class": "sidebar_tree",
-        "row_padding": [16, 4, 16, 4],
-        "indent": 10,
+        "row_padding": [0, -1, 0, 0],
+        "indent": 6,
         "indent_offset": 16,
         "indent_top_level": false,
         "dark_content": true,
@@ -70,7 +70,7 @@
     {
         "class": "tree_row",
         "attributes": ["selectable", "hover"],
-        "layer0.tint": [255, 255, 255, 0.06],
+        "layer0.tint": [255, 255, 255, 0.04],
         "layer0.opacity": 1.0,
     },
     {
@@ -88,7 +88,7 @@
     {
         "class": "tree_row",
         "attributes": ["selected"],
-        "layer0.tint": [255, 255, 255, 0.18],
+        "layer0.tint": [255, 255, 255, 0.06],
         "layer0.opacity": 1.0,
     },
     {
@@ -106,8 +106,8 @@
     {
         "class": "sidebar_heading",
         "fg": ["background", 255, 255, 255, 0.55],
-        "font.size": 13,
-        "font.bold": true,
+        "font.size": 10,
+        "font.bold": false,
         "shadow_color": [0, 0, 0, 0.1],
         "shadow_offset": [0, 1]
     },
@@ -119,8 +119,8 @@
     },
     {
         "class": "sidebar_label",
-        "fg": ["background", 255, 255, 255, 0.8],
-        "font.size": 12
+        "fg": ["background", 255, 255, 255, 0.3],
+        "font.size": 11
     },
     {
         "class": "sidebar_label",
@@ -130,7 +130,7 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "fg": [255, 255, 255],
+        "fg": [255, 255, 255, 0.3],
     },
     {
         "class": "sidebar_label",
@@ -140,8 +140,9 @@
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-        "settings": ["bold_folder_labels"],
-        "font.bold": true
+        // "settings": ["bold_folder_labels"],
+        "fg": [255, 255, 255, 0.6],
+        "font.bold": false
     },
     // Open Files Icons
     {
@@ -192,24 +193,25 @@
         "attributes": ["hover"],
         "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
     },
-    {
-        "class": "icon_folder",
-        "layer0.texture": "Theme - Default/common/dark/folder_closed.png",
-        "layer0.opacity": 0.3,
-        "content_margin": [9, 8]
-    },
+    // {
+    //     "class": "icon_folder",
+    //     "layer0.texture": "Theme - Default/common/dark/folder_closed.png",
+    //     "layer0.opacity": 0.3,
+    //     "content_margin": [9, 8]
+    // },
     {
         "class": "icon_folder",
         "parents": [{"class": "window", "attributes": ["file_light"]}],
         "layer0.tint": [0, 0, 0],
         "layer0.opacity": 0.25,
     },
-    {
-        "class": "icon_folder",
-        "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-        "layer0.texture": "Theme - Default/common/dark/folder_open.png",
-        "content_margin": [9, 8]
-    },
+    // {
+    //     "class": "icon_folder",
+    //     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+    //     "layer0.texture": "Theme - Default/common/dark/folder_open.png",
+    //     "layer0.opacity": 0.3,
+    //     "content_margin": [9, 8]
+    // },
     {
         "class": "icon_folder_loading",
         "layer0.texture":
@@ -249,23 +251,23 @@
         "layer0.tint": [0, 0, 0],
         "layer0.opacity": 0.4,
     },
-    {
-        "class": "icon_folder_dup",
-        "layer0.texture": "Theme - Default/common/dark/symlink.png",
-        "layer0.opacity": 0.3,
-        "content_margin": [9, 8]
-    },
+    // {
+    //     "class": "icon_folder_dup",
+    //     "layer0.texture": "Theme - Default/common/dark/symlink.png",
+    //     "layer0.opacity": 0.3,
+    //     "content_margin": [9, 8]
+    // },
     {
         "class": "icon_folder_dup",
         "parents": [{"class": "window", "attributes": ["file_light"]}],
         "layer0.tint": [0, 0, 0],
         "layer0.opacity": 0.4,
     },
-    {
-        "class": "icon_file_type",
-        "layer0.opacity": 0.5,
-        "content_margin": [9, 8]
-    },
+    // {
+    //     "class": "icon_file_type",
+    //     "layer0.opacity": 0.5,
+    //     "content_margin": [9, 8]
+    // },
     {
         "class": "icon_file_type",
         "parents": [{"class": "window", "attributes": ["file_light"]}],
@@ -277,10 +279,10 @@
     {
         "class": "tabset_control",
         "layer0.opacity": 1.0,
-        "content_margin": [4, 0, 8, 0],
+        "content_margin": [-2, 0, -2, 0],
         "tint_index": 0,
-        "tab_height": 34,
-        "tab_overlap": 16
+        "tab_height": 30,
+        "tab_overlap": 18
     },
     {
         "class": "tabset_control",
@@ -325,7 +327,7 @@
         "tint_index": 1,
         "tint_modifier": [0, 0, 0, 0.12],
         "accent_tint_index": 2,
-        "content_margin": [26, 8, 22, 4],
+        "content_margin": [20, 8, 12, 4],
         "hit_test_level": 0.3
     },
     {
@@ -431,7 +433,7 @@
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-        "fg": [255, 255, 255]
+        "fg": [220, 220, 220]
     },
     {
         "class": "tab_label",
@@ -468,6 +470,8 @@
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
         "layer0.texture": "Theme - Default/common/dark/tab_dirty.png",
+        "layer0.tint": [255, 0, 0],
+        "layer0.opacity": 0.7,
     },
     {
         "class": "tab_close_button",
@@ -679,7 +683,7 @@
     {
         "class": "minimap_control",
         "settings": ["always_show_minimap_viewport"],
-        "viewport_color": [128, 128, 128, 0.18],
+        "viewport_color": [128, 128, 128, 0.09],
         "viewport_opacity": 1.0,
     },
     {
@@ -757,10 +761,10 @@
     },
     {
         "class": "auto_complete_label",
-        "fg": [0, 0, 0, 0.0],
-        "match_fg": [255, 255, 255, 0.18],
+        "fg": [250, 250, 250, 0.4],
+        "match_fg": [255, 255, 255, 0.7],
         "selected_fg": [0, 0, 0, 0.0],
-        "selected_match_fg": [255, 255, 255, 0.18],
+        "selected_match_fg": [255, 255, 255, 0.7],
         "fg_blend": true
     },
     {
@@ -1032,11 +1036,11 @@
     {
         "class": "text_line_control",
         "layer0.texture": "Theme - Default/common/dark/input.png",
-        "layer0.opacity": 0.15,
+        "layer0.opacity": 0.06,
         "layer0.inner_margin": 4,
         "content_margin": 4,
-        "color_scheme_tint": [0, 0, 0, 0.4],
-        "color_scheme_tint_2": [255, 255, 255, 0.15]
+        // "color_scheme_tint": [0, 2, 3, 0.4],
+        // "color_scheme_tint_2": [255, 255, 255, 0.03]
     },
     {
         "class": "text_line_control",
@@ -1482,7 +1486,7 @@
         "class": "status_bar",
         "layer0.tint": ["background", 0, 0, 0, 0.4],
         "layer0.opacity": 1.0,
-        "content_margin": [8, 4, 12, 4]
+        "content_margin": [8, 0, 2, 2]
     },
     {
         "class": "status_bar",
