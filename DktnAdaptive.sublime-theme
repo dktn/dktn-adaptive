@@ -658,7 +658,7 @@
     {
         "class": "grid_layout_control",
         "border_color": ["background", 0, 0, 0, 0.4],
-        "border_size": 2
+        "border_size": 0
     },
     {
         "class": "grid_layout_control",
@@ -1491,7 +1491,7 @@
     {
         "class": "status_bar",
         "parents": [{"class": "window", "attributes": ["file_dark"]}],
-        "layer0.tint": ["background", 255, 255, 255, 0.2],
+        "layer0.tint": ["background", 0, 0, 0, 0.2],
     },
     {
         "class": "status_bar",
