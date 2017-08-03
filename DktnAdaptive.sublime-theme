@@ -141,7 +141,7 @@
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
         // "settings": ["bold_folder_labels"],
-        "fg": [255, 255, 255, 0.6],
+        "fg": ["background", 255, 255, 255, 0.6],
         "font.bold": false
     },
     // Open Files Icons
